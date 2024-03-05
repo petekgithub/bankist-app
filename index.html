@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Bankist</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav>
+      <p class="welcome">Log in to get started</p>
+      <img src="logo.png" alt="logo" class="logo" />
+      <form class="login">
+        <input type="text" placeholder="user" class="login_input" />
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login-input"
+        />
+        <button class="login_btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="balance_label">Current balance</p>
+          <p class="balance_date">As of <span>03/02/2030</span></p>
+        </div>
+        <p class="balance_value">0000$</p>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements"></div>
+    </main>
+  </body>
+</html>
