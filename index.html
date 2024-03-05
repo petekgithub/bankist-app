@@ -9,25 +9,24 @@
       href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
     <title>Bankist</title>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- TOP NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav>
       <p class="welcome">Log in to get started</p>
       <img src="logo.png" alt="logo" class="logo" />
       <form class="login">
-        <input type="text" placeholder="user" class="login_input" />
+        <input type="text" placeholder="user" class="login__input--user" />
         <input
-          type="text"
+          type="password"
           placeholder="PIN"
           maxlength="4"
-          class="login-input"
+          class="login__input--pin"
         />
-        <button class="login_btn">&rarr;</button>
+        <button class="login__btn">&rarr;</button>
       </form>
     </nav>
 
