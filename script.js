@@ -1,4 +1,4 @@
-//data
+// data
 
 const acc1 = {
   owner: "Petek",
@@ -25,11 +25,51 @@ const acc4 = {
   pin: 4444,
 };
 
-const accounts = [acc1, acc2, acc3];
+const accounts = [acc1, acc2, acc3, acc4];
 
-for (let i = 0; i < accounts.length; i++) {
-  console.log(accounts[i].movements);
-  for (let j = 0; j < accounts[i].movements.length; j++) {
-    console.log(accounts[i].movements[j]);
-  }
-}
+// elements
+const labelWelcome = document.querySelector(".welcome");
+const labelDate = document.querySelector(".date");
+const labelBalance = document.querySelector(".balance__value");
+const labelSumIn = document.querySelector(".summary__value--in");
+const labelSumOut = document.querySelector(".summary__value--out");
+const labelSumInterest = document.querySelector(".summary__value--interest");
+const labelTimer = document.querySelector(".timer");
+
+const containerApp = document.querySelector(".app");
+const containerMovements = document.querySelector(".movements");
+
+const btnLogin = document.querySelector(".login__btn");
+const btnTransfer = document.querySelector(".form__btn--transfer");
+const btnLoan = document.querySelector(".form__btn--loan");
+const btnClose = document.querySelector(".form__btn--close");
+const btnSort = document.querySelector(".btn--sort");
+
+const inputLoginUsername = document.querySelector(".login__input--user");
+const inputLoginPin = document.querySelector(".login__input--pin");
+const inputTransferTo = document.querySelector(".form__input--to");
+const inputTransferAmount = document.querySelector(".form__input--amount");
+const inputLoanAmount = document.querySelector(".form__input--loan-amount");
+const inputCloseUserName = document.querySelector(".form__input--user");
+const inputClosePin = document.querySelector(".form__input--pin");
+
+// functions
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = "";
+
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? "deposit" : "withdrawal";
+
+    const html = `
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+          <div class="movements__value">${mov}</div>
+      </div>
+    `;
+
+    containerMovements.insertAdjacentHTML("afterbegin", html);
+  });
+};
+displayMovements(acc1.movements);
