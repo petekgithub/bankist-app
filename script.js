@@ -110,6 +110,7 @@ const calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `${interest}€`;
 };
 
+//*****create username ****//
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
@@ -119,6 +120,7 @@ const createUsernames = function (accs) {
       .join("");
   });
 };
+
 createUsernames(accounts);
 
 const updateUI = function (acc) {
